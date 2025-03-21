@@ -8,6 +8,8 @@
 | -- | -- |
 | 202408380501  |  Enrique Labre |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
 
 ## Sobre 
 Descreva o seu projeto em linhas gerais. 
