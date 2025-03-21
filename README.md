@@ -1,4 +1,4 @@
-# NomedoProjeto
+# ALPHA
 
 **Número do Grupo**: XX<br>
 **Código da Disciplina**: FGA0208-T01<br>
@@ -7,7 +7,7 @@
 |Matrícula | Aluno |
 | -- | -- |
 | 202408380501  |  Enrique Labre |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 202407278752  |  Pedro de Castro Kurtz |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 
