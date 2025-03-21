@@ -8,13 +8,13 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
 
 # NomedoProjeto
 
-**Número do Grupo**: XX<br>
+**ALPHA**: XX<br>
 **Código da Disciplina**: FGA0208-T01<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 202408380501  |  Enrique Labre |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 
 ## Sobre 
