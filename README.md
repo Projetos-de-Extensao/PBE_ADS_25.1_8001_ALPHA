@@ -30,4 +30,4 @@ Explique como usar seu projeto caso haja algum passo a passo após o comando de 
 Adicione 1 ou mais vídeos com a execução do projeto final.
 
 ## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+[Pesquisa sobre o Censo Demográfico do IBGE 2022](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/pesquisa%20censo%20demografico.md)
