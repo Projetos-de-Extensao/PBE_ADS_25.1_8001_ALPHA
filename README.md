@@ -8,7 +8,7 @@
 | -- | -- |
 | 202408380501  |  Enrique Labre |
 | 202407278752  |  Pedro de Castro Kurtz |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 202401590118  |  Jeronimo Chiclana |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 
 ## Sobre 
