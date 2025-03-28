@@ -40,6 +40,9 @@ A pesquisa é feita com intuito de obter dados sobre toda a população brasilei
 * Número de falecidos (últimos anos) 
 * Faixa etária dos falecidos 
 
+# Dificuldade de Obter esses dados
+
+Obter dados específicos da Ilha Primeira, diretamente do censo pode ser desafiador, a menos que os dados sejam agregados em um nível que inclua essa área. Normalmente, os dados do censo são divulgados em níveis geográficos mais amplos, como municípios ou divisões administrativas maiores. No entanto, pode ser possível acessar dados mais detalhados por meio de solicitações específicas ao Instituto Brasileiro de Geografia e Estatística (IBGE) ou por meio de parcerias com agências governamentais locais.
  
 # Requisitos extras que podem ser incluídos futuramente 
 
