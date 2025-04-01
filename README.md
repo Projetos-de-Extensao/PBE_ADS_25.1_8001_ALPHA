@@ -9,7 +9,7 @@
 | 202408380501  |  Enrique Labre |
 | 202407278752  |  Pedro de Castro Kurtz |
 | 202401590118  |  Jeronimo Chiclana |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  Julia Siodaro |
 
 ## Sobre 
 Descreva o seu projeto em linhas gerais. 
