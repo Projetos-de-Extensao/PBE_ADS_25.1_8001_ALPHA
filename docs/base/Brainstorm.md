@@ -22,67 +22,25 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via Discord, come�
 ### 1. Qual o objetivo principal da aplicação?
  
 <p align = "justify">
-<b>1</b> - Deve ser uma plataforma onde qualquer pessoa possa...
+<b>1</b> - Deve ser uma plataforma que recebe, armazena, gerencia e disponibiliza um questionário feito pelo IBGE para obter dados sobre condições de vida da Ilha Primeira.
 </p>
  
-<b>2</b> - A plataforma deve fornece...
+<b>2</b> - A plataforma deve fornecer um questionario de perguntas enorme parecido com o do IBGE do censo de 2022.
+</p>
  
-<b>3</b> - O objetivo da aplicação é....
+<b>3</b> - O objetivo da aplicação é descobrir principais problemas da Ilha Primeira e auxiliar-los nas melhoras desses problemas.
+</p>
  
-<b>4</b> - O principal objetivo da aplicação é a...
- 
-<b>5</b> - A plataforma deve gerenciar...
+<b>4</b> - A plataforma deve gerenciar os dados recebidos dos questionarios e armazena-las para analise.
 </p>
  
 ---
  
-### 2. Como será o processo para cadastrar um novo clientetorneio?
+### 2. Como será o processo para receber novos dados do questionario dos habitantes?
  
 <p align = "justify">
-<b>XXXX</b> - O moderador deverá fazer login e...
+<b>1</b> - O moderador deverá fazer login e terá acesso aos dados das respostas dos questionários da Ilha Primeira
  
-<b>YYYY</b> - O cliente...
- 
-<b>WWWW</b> - Com o usuário logado, ele deverá...
-
-<b>ZZZZ</b> - O cliente...
- 
-<b>KKK</b> - O cliente...
- 
----
- 
-### 3. Como será a forma de adicionar produtos?
- 
-<p align = "justify">
-<b>XXXX</b> - O cliente ao cadastrar...
-</p>
- 
-<p align = "justify">
-<b>YYYYY</b> - O produto tem...
-</p>
- 
-<b>ZZZZ</b> - O produto....
- 
-<b>XXXX</b> - O produto....
-
- 
----
- 
-### 4. Outras perguntas pertinentes ao contexto
-
-<p align = "justify">
-<b>XXXX</b> - Com a localização...
- 
-<b>YYYY</b> - O cliente...
- 
-<b>ZZZ</b> - O cliente...
- 
----
- 
-### 5. "Outras perguntas pertinentes ao contexto", Como seria a forma de adicionar do cliente adicionar os produtos ?
-<p align = "justify">
-<b>XXX</b> - O cliente....
-</p>
  
 ### 6. Quais informações seriam interessante para o cliente?
 <p align = "justify">
@@ -94,25 +52,6 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via Discord, come�
    
 </p>
  
-### Requisitos elicitados
- 
-|ID|Descrição|
-|----|-------------|
-|BS01| O cliente...|
-|BS02| O cliente...|
-|BS03| O cliente...|
-|BS04| O cliente...|
-|BS05| O cliente...|
-|BS06| O cliente...|
-|BS07| O cliente...|
-|BS08| O cliente...|
-|BS09| O cliente...|
-|BS10| O produto...|
-|BS11| O produto...|
-|BS12| O produto...|
-|BS13| O produto...|
-|BS14| O produto...|
-|BS15| O produto...|
  
 ## Conclusão
 <p align = "justify">
