@@ -9,7 +9,7 @@
 | 202408380501  |  Enrique Labre |
 | 202407278752  |  Pedro de Castro Kurtz |
 | 202401590118  |  Jeronimo Chiclana |
-| xx/xxxxxx  |  Julia Siodaro |
+| 202401000434  |  Julia Siodaro |
 
 ## Sobre 
 Plataforma para gerenciamento e armazenamento de dados sobre o questionário do Censo 2022 com foco na Ilha Primeira.
