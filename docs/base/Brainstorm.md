@@ -39,19 +39,13 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via Discord, come�
 ### 2. Como será o processo para receber novos dados do questionario dos habitantes?
  
 <p align = "justify">
-<b>1</b> - O moderador deverá fazer login e terá acesso aos dados das respostas dos questionários da Ilha Primeira
- 
- 
-### 6. Quais informações seriam interessante para o cliente?
-<p align = "justify">
-   <b>XXX</b> - Informações...
-   
-   <b>ZZZZ</b> - O cliente usuário poderá acessar informações...
+<b>1</b> - O moderador deverá fazer login e terá acesso aos dados das respostas dos questionários da Ilha Primeira.
+</p>
 
-   <b>WWWWs</b> - O usuário poderá ver scouts de partidas do torneio, ver as regras dos torneios, locais e data das partidas.
-   
+<b>2</b> - O cliente entra na plataforma e responde o questionário e os dados escritos ficam armazenados no sistema.
 </p>
  
+---
  
 ## Conclusão
 <p align = "justify">
