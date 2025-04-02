@@ -65,4 +65,6 @@ Através da aplicação da técnica, foi possível elicitar alguns dos primeiros
 ## Autor(es)
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
-| DD/MM/YYYY | 1.0 | Criação do documento | XXX XXXX, XXXX XXXX, YYY YYYY e ZZZ XXXX |
+| 29/03/2025 | 1.0 | Brainstorm de Ideias em grupo | Enrique Labre, Pedro Kurtz, Jeronimo Chiclana e Julia Siodaro |
+| 02/04/2025 | 1.1 | Modificações Finais | Enrique Labre, Pedro Kurtz |
+| 02/04/2025 | 2.0 | Finalização do Brainstorm | Pedro Kurtz |
