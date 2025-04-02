@@ -1,6 +1,6 @@
 # ALPHA
 
-**Número do Grupo**: XX<br>
+**Número do Grupo**: 01<br>
 **Código da Disciplina**: FGA0208-T01<br>
 
 ## Alunos
@@ -30,8 +30,6 @@ Explique como usar seu projeto caso haja algum passo a passo após o comando de 
 Adicione 1 ou mais vídeos com a execução do projeto final.
 
 ## Outros 
-[Pesquisa sobre o Censo Demográfico do IBGE 2022](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/pesquisa%20censo%20demografico.md)
-
-[Brainstorm](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/Brainstorm.md)
-
+[Pesquisa sobre o Censo Demográfico do IBGE 2022](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/pesquisa%20censo%20demografico.md)<br>
+[Brainstorm](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/Brainstorm.md)<br>
 [5W2H](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/5w2h.md)
