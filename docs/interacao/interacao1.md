@@ -3,37 +3,33 @@ id: interação1
 title: Interação 1
 ---
 
-# Interação 1 (05/02/24 à 12/04/2024)
+# Interação 1 (27/03/2025 à 03/04/2025)
 
 
 ## Planejamento de Interação
-#### Presentes na reunião: XXXXX
+#### Presentes na reunião: Todos
 
 ###  Lista de Tarefas da Interação
 
 |Tarefa|Responsabilidade|
 |---|----|
 | Decidir o nome o projeto.|Todos|
-| Criar o repositório nos padrões (Organizar wiki).| Matheus|
-| Criar issues no GitHub / ZenHub| Renan|
-| Configuração do grupo do Telegram(configurar bot).|Moacir|
-| Estudar e escolher as metodologias.| Todos|
-| [Documento de visão](https://github.com/xxx/xxx.md) |XXX e XXXXX|
-| Elaborar [5w2H](https://github.com/xxx/xxx.md) |XXX e XXXXX|
-| [Mapas Mentais](https://github.com/xxx/xxx.md) |XXX e XXXXX|
-| [Brainstorming](https://github.com/UnBArqDsw/2020.1_G7_TCM/blob/master/docs/base/Brainstorm.md) |Todos|
-|[Entrevistas](https://github.com/xxx/xxx.md) |XXX e XXXXX|
-|[Prototipação.](https://github.com/xxx/xxx.md) |XXX e XXXXX|
+| Criar o repositório nos padrões (Organizar wiki).| Jeronimo|
+| Criar issues no GitHub| Jeronimo, Enrique, Pedro|
+| [Pesquisa do Centro Demográfico](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/pesquisa%20censo%20demografico.md)| Enrique, Pedro|
+| Elaborar [5w2H](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/5w2h.md) | Enrique|
+| [Mapas Mentais](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/mapa_mental.md) | Pedro|
+| [Brainstorming](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/Brainstorm.md) |Todos|
 
 ## Sprint Retrospective/Review Meeting
 
-#### Presentes na reunião: XXXX
+#### Presentes na reunião: Todos
 
 ### Dividas da Interação
-- 
-- 
-- 
-- 
+- Prototipação
+- Diagrama de Classes
+- Casos de Uso
+- Entrevistas
 
 ### Riscos Encontrados
 
@@ -58,14 +54,8 @@ title: Interação 1
 
 ### O que podemos melhorar?
 - Ter mais foco na reuniões para evitar o desperdício de tempo.
-- A equipe deve ter mais autonomia em relação à falta de membros.
-- Podemos utilizar algo ferramenta de timebox para maior efetividade nas reuniões, sugestão: https://timebox.cedrotech.com/
-
+- Podemos utilizar alguma ferramenta para encargo de responsabilidades fora do GitHub (Notion)
 
 ### Ferramentas utilizadas
 
-- Reunião: [Hangouts](https://hangouts.google.com/)
-- Colheita dos pontos: [Mentimeter](https://www.mentimeter.com/)
-
-
-
+- Reunião: [Discord](https://discord.com/)
