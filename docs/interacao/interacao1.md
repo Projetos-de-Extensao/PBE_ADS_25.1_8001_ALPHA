@@ -38,19 +38,15 @@ title: Interação 1
 
 ### Pontos Positivos
 
--
--
-- 
--
-![pontos positivos](../assets/Sprints/S1-positivos.png)
+- Reuniões rápidas e diretas ao ponto, equipe bem alinhada.
+- Ideias boas colocadas na mesa
+- Equipe organizada
 
 ### Pontos Negativos
 
--
--
-- 
--
-![pontos negativos](../assets/Sprints/S1-negativos.png)
+- Grupo precisa de mais responsabilidade na realização das tarefaas
+- Ausencia de membros constante nas tomadas de decisão
+- Falta de comunicação
 
 ### O que podemos melhorar?
 - Ter mais foco na reuniões para evitar o desperdício de tempo.
