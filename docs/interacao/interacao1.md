@@ -15,7 +15,7 @@ title: Interação 1
 |---|----|
 | Decidir o nome o projeto.|Todos|
 | Criar o repositório nos padrões (Organizar wiki).| Jeronimo|
-| Criar issues no GitHub| Jeronimo, Enrique, Pedro|
+| Criar issues no GitHub| Jeronimo, Enrique, Pedro, Julia|
 | [Pesquisa do Centro Demográfico](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/pesquisa%20censo%20demografico.md)| Enrique, Pedro|
 | Elaborar [5w2H](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/5w2h.md) | Enrique|
 | [Mapas Mentais](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/mapa_mental.md) | Pedro|
