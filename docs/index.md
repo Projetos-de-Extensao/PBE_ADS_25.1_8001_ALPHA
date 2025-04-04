@@ -1,5 +1,5 @@
 # Projeto Back End
-## Grupo 1 : Julia Siodaro, Jeronimo chiclana , Enrique Labre, Pedro de Castro Kurtz
+## Grupo 1 : Julia Siodaro, Jeronimo Chiclana , Enrique Labre, Pedro de Castro Kurtz
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
