@@ -1,10 +1,7 @@
 from rest_framework import viewsets
-from .models import Administrador, Domicilio, Morador
-from .serializers import AdministradorSerializer, DomicilioSerializer, MoradorSerializer
+from .models import Domicilio, Morador
+from .serializers import DomicilioSerializer, MoradorSerializer
 
-class AdministradorViewSet(viewsets.ModelViewSet):
-    queryset = Administrador.objects.all()
-    serializer_class = AdministradorSerializer
 
 class DomicilioViewSet(viewsets.ModelViewSet):
     queryset = Domicilio.objects.all()
