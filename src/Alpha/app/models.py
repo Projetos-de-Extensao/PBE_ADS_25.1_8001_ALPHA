@@ -35,15 +35,15 @@ class Domicilio(models.Model):
     ]
 
     uf = models.CharField(max_length=2)
-    municipio = models.CharField(max_length=5)
-    distrito = models.CharField(max_length=2)
+    municipio = models.CharField(max_length=50)
+    distrito = models.CharField(max_length=50)
     especieDomicilio = models.CharField(max_length=100,choices=ESPECIE_DOMICILIO)
     tipoDomicilio = models.CharField(max_length=100,choices=TIPO_DOMICILIO)
 
   
     
     def __str__(self):
-        return self.nome
+        return self.uf
 
 class Morador(models.Model):
     nome = models.CharField(max_length=100, null = True, blank= True)
