@@ -1,15 +1,14 @@
-from django.urls import path
-from . import views
-from .views import AdministradorViewSet, DomicilioViewSet, MoradorViewSet
+# myapp/api_urls.py
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+
+from app.views import MoradorViewSet
+
 
 router = DefaultRouter()
-router.register(r'administrador', AdministradorViewSet)
-router.register(r'domicilio', DomicilioViewSet)
-router.register(r'morador', MoradorViewSet)
-
-urlpatterns = router.urls
-
+router.register(r'Morador', MoradorViewSet, basename='Morador')
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', include(router.urls)),
+    path('Domicilio', DomicilioAPIView.as_view(), name='domicilio'),
 ]
