@@ -68,11 +68,11 @@ class Domicilio(models.Model):
     uf = models.CharField(choices=ESTADOS_BRASIL)
     municipio = models.CharField(max_length=50)
     distrito = models.CharField(max_length=50)
-    cep = models.CharField(max_length=9)
-    especieDomicilio = models.CharField(max_length=100,choices=ESPECIE_DOMICILIO, default='OUTROS')
+    cep = models.CharField(max_length=8, null=True, blank=True)
+    especieDomicilio = models.CharField(max_length=100,choices=ESPECIE_DOMICILIO)
     tipoDomicilio = models.CharField(max_length=100,choices=TIPO_DOMICILIO)
-    qtdMoradores = models.PositiveSmallIntegerField()
-    qtdCriancas = models.PositiveSmallIntegerField()
+    qtdMoradores = models.PositiveSmallIntegerField(max_length=100, null=True, blank=True)
+    qtdCriancas = models.PositiveSmallIntegerField(max_length=100, null=True, blank=True)
     ABASTECIMENTO_AGUA = [
         ('REDE GERAL DE DISTRIBUIÇÃO', 'REDE GERAL DE DISTRIBUIÇÃO'),
         ('POÇO PROFUNDO OU ARTESIANO', 'POÇO PROFUNDO OU ARTESIANO'),
@@ -121,7 +121,7 @@ class Domicilio(models.Model):
     abastecimentoAgua = models.CharField(choices=ABASTECIMENTO_AGUA, null = True, blank= True)
     acessoRedeAgua = models.BooleanField(null = True, blank= True)
     aguaChega = models.CharField(choices=AGUA_UTILIZADA_CHEGA,  null = True, blank= True)
-    quantosbanheirosUsoExclusivo = models.PositiveSmallIntegerField()
+    quantosbanheirosUsoExclusivo = models.PositiveSmallIntegerField(null=True, blank=True)
     utilizaBanheiroUsoComumMais = models.BooleanField(null = True, blank= True)
     utilizaSanitarioBuracoDejecoes = models.BooleanField(null = True, blank= True)
     esgotoFim = models.CharField(choices=ESGOTO_BANHEIRO_FIM, null = True, blank= True)
@@ -134,39 +134,15 @@ class Domicilio(models.Model):
 
 
 class Morador(models.Model):
-    domicilio = models.ForeignKey(Domicilio, related_name= 'Morador', on_delete= models.CASCADE, null= True, blank= True)
-    nome = models.CharField(max_length=100, null = True, blank= True)
-    sobrenomeMorador = models.CharField(max_length=50, null = True, blank= True)
+    domicilio = models.ForeignKey(Domicilio, related_name= 'Morador', on_delete= models.CASCADE)
+    nome = models.CharField(max_length=100)
+    sobrenome = models.CharField(max_length=50)
     SEXO_MORADOR = [
         ("MASCULINO", "MASCULINO"),
         ("FEMININO", "FEMININO")
     ]
-    dtNascimento = models.CharField(max_length=2, null = True, blank= True)
-    MES_NASCIMENTO = [
-        ("JANEIRO", "JANEIRO"),
-        ("FEVEREIRO", "FEVEREIRO"),
-        ("MARCO", "MARCO"),
-        ("ABRIL", "ABRIL"),
-        ("MAIO", "MAIO"),
-        ("JUNHO", "JUNHO"),
-        ("JULHO", "JULHO"),
-        ("AGOSTO", "AGOSTO"),
-        ("SETEMBRO", "SETEMBRO"),
-        ("OUTUBRO", "OUTUBRO"),
-        ("NOVEMBRO", "NOVEMBRO"),
-        ("DEZEMBRO", "DEZEMBRO")
-    ]
-    sexoMorador = models.CharField(choices=SEXO_MORADOR, null = True, blank= True)
-    mesNascimento = models.CharField(choices=MES_NASCIMENTO, null = True, blank= True)
-    anoNascimento = models.CharField(max_length=4, null = True, blank= True)
-    NaoseiMesAno = models.BooleanField(null = True, blank= True)
-    IDADE = [
-        ("UM ANO OU MAIS", "UM ANO OU MAIS"),
-        ("MENOS DE UM ANO", "MENOS DE UM ANO")
-    ]
-    idadeMorador = models.CharField(choices=IDADE, null = True, blank= True)
-    idadeEmAnos = models.CharField(max_length=4, null = True, blank= True)
-    idadeEmMeses = models.CharField(max_length=2, null = True, blank= True)
+    data_Nascimento = models.DateField()
+    
     RELACAO_CONVIVENCIA = [
         ("PESSOA RESPONSAVEL PELO DOMICILIO", "PESSOA RESPONSAVEL PELO DOMICILIO"),
         ("CONJUGE OU COMPANHEIRO(A) DE SEXO DIFERENTE", "CONJUGE OU COMPANHEIRO(A) DE SEXO DIFERENTE"),
@@ -187,16 +163,11 @@ class Morador(models.Model):
         ("PENSIONISTA", "PENSIONISTA"),
         ("EMPREGADO(A) DOMESTICO(A)", "EMPREGADO(A) DOMESTICO(A)"),
         ("PARENTE DO(A) EMPREGADO(A) DOMESTICO(A)", "PARENTE DO(A) EMPREGADO(A) DOMESTICO(A)"),
-        ("INDIVIDUAL EM DOMICILIO COLETIVO", "INDIVIDUAL EM DOMICILIO COLETIVO")
+        ("INDIVIDUAL EM DOMICILIO COLETIVO", "INDIVIDUAL EM DOMICILIO COLETIVO"),
+        ("OUTRO", "OUTRA"),
+        ("NO", "PREFIRO NÃO RESPONDER")
     ]
-    relacaoConvivencia = models.CharField(choices=RELACAO_CONVIVENCIA, null = True, blank= True)
-
-   
+    relacaoConvivencia = models.CharField(choices=RELACAO_CONVIVENCIA)
 
     def __str__(self):
         return self.nome
-    
-
-    
-
-
