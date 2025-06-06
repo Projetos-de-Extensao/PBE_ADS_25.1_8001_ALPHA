@@ -1,61 +1,5 @@
 from django.db import models
 
-class CaracteristicasDomicilio(models.Model):
-    ABASTECIMENTO_AGUA = [
-        ('REDE GERAL DE DISTRIBUIÇÃO', 'REDE GERAL DE DISTRIBUIÇÃO'),
-        ('POÇO PROFUNDO OU ARTESIANO', 'POÇO PROFUNDO OU ARTESIANO'),
-        ('POÇO RASO, FREÁTICO OU CACIMBA', 'POÇO RASO, FREÁTICO OU CACIMBA'),
-        ('FONTE, NASCENTE OU MINA', 'FONTE, NASCENTE OU MINA'),
-        ('CARRO-PIPA', 'CARRO-PIPA'),
-        ('ÁGUA DA CHUVA ARMAZENADA', 'ÁGUA DA CHUVA ARMAZENADA'),
-        ('RIOS, AÇUDES, CÓRREGOS, LAGOS E IGARAPÉS', 'RIOS, AÇUDES, CÓRREGOS, LAGOS E IGARAPÉS'),
-        ('OUTRA', 'OUTRA'),
-    ]
-
-    AGUA_UTILIZADA_CHEGA = [
-        ('ENCANADA ATÉ DENTRO DA CASA, APARTAMENTO OU HABITAÇÃO', 'ENCANADA ATÉ DENTRO DA CASA, APARTAMENTO OU HABITAÇÃO'),
-        ('ENCANADA, MAS APENAS NO TERRENO', 'ENCANADA, MAS APENAS NO TERRENO'),
-        ('NÃO CHEGA ENCANADA', 'NÃO CHEGA ENCANADA'),
-    ]
-
-    ESGOTO_BANHEIRO_FIM = [
-        ('REDE GERAL OU PLUVIAL', 'REDE GERAL OU PLUVIAL'),
-        ('FOSSA SÉPTICA OU FOSSA FILTRO LIGADA À REDE', 'FOSSA SÉPTICA OU FOSSA FILTRO LIGADA À REDE'),
-        ('FOSSA SÉPTICA OU FOSSA FILTRO NÃO LIGADA À REDE', 'FOSSA SÉPTICA OU FOSSA FILTRO NÃO LIGADA À REDE'),
-        ('FOSSA RUDIMENTAR OU BURACO', 'FOSSA RUDIMENTAR OU BURACO'),
-        ('VALA', 'VALA'),
-        ('RIO, LAGO, CÓRREGO OU MAR', 'RIO, LAGO, CÓRREGO OU MAR'),
-        ('OUTRA FORMA', 'OUTRA FORMA'),
-    ]
-
-    ESGOTO_SANITARIO_BURACO_FIM = [
-        ('REDE GERAL OU PLUVIAL', 'REDE GERAL OU PLUVIAL'),
-        ('FOSSA SÉPTICA OU FOSSA FILTRO LIGADA À REDE', 'FOSSA SÉPTICA OU FOSSA FILTRO LIGADA À REDE'),
-        ('FOSSA SÉPTICA OU FOSSA FILTRO NÃO LIGADA À REDE', 'FOSSA SÉPTICA OU FOSSA FILTRO NÃO LIGADA À REDE'),
-        ('FOSSA RUDIMENTAR OU BURACO', 'FOSSA RUDIMENTAR OU BURACO'),
-        ('VALA', 'VALA'),
-        ('RIO, LAGO, CÓRREGO OU MAR', 'RIO, LAGO, CÓRREGO OU MAR'),
-        ('OUTRA FORMA', 'OUTRA FORMA'),
-    ]
-
-    LIXO_DOMICILIO = [
-        ('COLETADO NO DOMICÍLIO POR SERVIÇO DE LIMPEZA', 'COLETADO NO DOMICÍLIO POR SERVIÇO DE LIMPEZA'),
-        ('DEPOSITADO EM CAÇAMBA DE SERVIÇO DE LIMPEZA', 'DEPOSITADO EM CAÇAMBA DE SERVIÇO DE LIMPEZA'),
-        ('QUEIMADO NA PROPRIEDADE', 'QUEIMADO NA PROPRIEDADE'),
-        ('ENTERRADO NA PROPRIEDADE', 'ENTERRADO NA PROPRIEDADE'),
-        ('JOGADO EM TERRENO BALDIO, ENCOSTA OU ÁREA PÚBLICA', 'JOGADO EM TERRENO BALDIO, ENCOSTA OU ÁREA PÚBLICA'),
-        ('OUTRO DESTINO', 'OUTRO DESTINO'),
-    ]
-
-    abastecimentoAgua = models.CharField(choices=ABASTECIMENTO_AGUA, null = True, blank= True)
-    acessoRedeAgua = models.BooleanField(null = True, blank= True)
-    aguaChega = models.CharField(choices=AGUA_UTILIZADA_CHEGA,  null = True, blank= True)
-    quantosbanheirosUsoExclusivo = models.CharField(max_length=2, null = True, blank= True)
-    utilizaBanheiroUsoComumMais = models.BooleanField(null = True, blank= True)
-    utilizaSanitarioBuracoDejecoes = models.BooleanField(null = True, blank= True)
-    esgotoFim = models.CharField(choices=ESGOTO_BANHEIRO_FIM, null = True, blank= True)
-    esgotoSBFim = models.CharField(choices=ESGOTO_SANITARIO_BURACO_FIM, null = True, blank= True)
-    lixoDomicilio = models.CharField(choices=LIXO_DOMICILIO, null = True, blank= True)
 
 
 
@@ -102,12 +46,69 @@ class Domicilio(models.Model):
     tipoDomicilio = models.CharField(max_length=100,choices=TIPO_DOMICILIO)
     qtdMoradores = models.CharField(max_length=2, null = True, blank= True)
     qtdCriancas = models.CharField(max_length=2, null = True, blank= True)
+    ABASTECIMENTO_AGUA = [
+        ('REDE GERAL DE DISTRIBUIÇÃO', 'REDE GERAL DE DISTRIBUIÇÃO'),
+        ('POÇO PROFUNDO OU ARTESIANO', 'POÇO PROFUNDO OU ARTESIANO'),
+        ('POÇO RASO, FREÁTICO OU CACIMBA', 'POÇO RASO, FREÁTICO OU CACIMBA'),
+        ('FONTE, NASCENTE OU MINA', 'FONTE, NASCENTE OU MINA'),
+        ('CARRO-PIPA', 'CARRO-PIPA'),
+        ('ÁGUA DA CHUVA ARMAZENADA', 'ÁGUA DA CHUVA ARMAZENADA'),
+        ('RIOS, AÇUDES, CÓRREGOS, LAGOS E IGARAPÉS', 'RIOS, AÇUDES, CÓRREGOS, LAGOS E IGARAPÉS'),
+        ('OUTRA', 'OUTRA'),
+    ]
 
+    AGUA_UTILIZADA_CHEGA = [
+        ('ENCANADA ATÉ DENTRO DA CASA, APARTAMENTO OU HABITAÇÃO', 'ENCANADA ATÉ DENTRO DA CASA, APARTAMENTO OU HABITAÇÃO'),
+        ('ENCANADA, MAS APENAS NO TERRENO', 'ENCANADA, MAS APENAS NO TERRENO'),
+        ('NÃO CHEGA ENCANADA', 'NÃO CHEGA ENCANADA'),
+    ]
+
+    ESGOTO_BANHEIRO_FIM = [
+        ('REDE GERAL OU PLUVIAL', 'REDE GERAL OU PLUVIAL'),
+        ('FOSSA SÉPTICA OU FOSSA FILTRO LIGADA À REDE', 'FOSSA SÉPTICA OU FOSSA FILTRO LIGADA À REDE'),
+        ('FOSSA SÉPTICA OU FOSSA FILTRO NÃO LIGADA À REDE', 'FOSSA SÉPTICA OU FOSSA FILTRO NÃO LIGADA À REDE'),
+        ('FOSSA RUDIMENTAR OU BURACO', 'FOSSA RUDIMENTAR OU BURACO'),
+        ('VALA', 'VALA'),
+        ('RIO, LAGO, CÓRREGO OU MAR', 'RIO, LAGO, CÓRREGO OU MAR'),
+        ('OUTRA FORMA', 'OUTRA FORMA'),
+    ]
+
+    ESGOTO_SANITARIO_BURACO_FIM = [
+        ('REDE GERAL OU PLUVIAL', 'REDE GERAL OU PLUVIAL'),
+        ('FOSSA SÉPTICA OU FOSSA FILTRO LIGADA À REDE', 'FOSSA SÉPTICA OU FOSSA FILTRO LIGADA À REDE'),
+        ('FOSSA SÉPTICA OU FOSSA FILTRO NÃO LIGADA À REDE', 'FOSSA SÉPTICA OU FOSSA FILTRO NÃO LIGADA À REDE'),
+        ('FOSSA RUDIMENTAR OU BURACO', 'FOSSA RUDIMENTAR OU BURACO'),
+        ('VALA', 'VALA'),
+        ('RIO, LAGO, CÓRREGO OU MAR', 'RIO, LAGO, CÓRREGO OU MAR'),
+        ('OUTRA FORMA', 'OUTRA FORMA'),
+    ]
+
+    LIXO_DOMICILIO = [
+        ('COLETADO NO DOMICÍLIO POR SERVIÇO DE LIMPEZA', 'COLETADO NO DOMICÍLIO POR SERVIÇO DE LIMPEZA'),
+        ('DEPOSITADO EM CAÇAMBA DE SERVIÇO DE LIMPEZA', 'DEPOSITADO EM CAÇAMBA DE SERVIÇO DE LIMPEZA'),
+        ('QUEIMADO NA PROPRIEDADE', 'QUEIMADO NA PROPRIEDADE'),
+        ('ENTERRADO NA PROPRIEDADE', 'ENTERRADO NA PROPRIEDADE'),
+        ('JOGADO EM TERRENO BALDIO, ENCOSTA OU ÁREA PÚBLICA', 'JOGADO EM TERRENO BALDIO, ENCOSTA OU ÁREA PÚBLICA'),
+        ('OUTRO DESTINO', 'OUTRO DESTINO'),
+    ]
+    abastecimentoAgua = models.CharField(choices=ABASTECIMENTO_AGUA, null = True, blank= True)
+    acessoRedeAgua = models.BooleanField(null = True, blank= True)
+    aguaChega = models.CharField(choices=AGUA_UTILIZADA_CHEGA,  null = True, blank= True)
+    quantosbanheirosUsoExclusivo = models.CharField(max_length=2, null = True, blank= True)
+    utilizaBanheiroUsoComumMais = models.BooleanField(null = True, blank= True)
+    utilizaSanitarioBuracoDejecoes = models.BooleanField(null = True, blank= True)
+    esgotoFim = models.CharField(choices=ESGOTO_BANHEIRO_FIM, null = True, blank= True)
+    esgotoSBFim = models.CharField(choices=ESGOTO_SANITARIO_BURACO_FIM, null = True, blank= True)
+    lixoDomicilio = models.CharField(choices=LIXO_DOMICILIO, null = True, blank= True)
+    cep = models.CharField(max_length=9,null= True, blank = True)
 
     def __str__(self):
         return self.uf
     
+
+
 class Morador(models.Model):
+    domicilio = models.ForeignKey(Domicilio, related_name= 'Morador', on_delete= models.CASCADE, null= True, blank= True)
     nome = models.CharField(max_length=100, null = True, blank= True)
     sobrenomeMorador = models.CharField(max_length=50, null = True, blank= True)
     SEXO_MORADOR = [
