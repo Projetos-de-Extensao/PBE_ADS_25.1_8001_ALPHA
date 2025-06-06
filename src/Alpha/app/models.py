@@ -1,10 +1,7 @@
 from django.db import models
 
 
-
-
-
-class Domicilio(models.Model):
+class Domicilio(models.Model):    
     ESPECIE_DOMICILIO = [
         ('DOMICILIO PARTICULAR PERMANENTEMENTE OCUPADO','DOMICILIO PARTICULAR PERMANENTEMENTE OCUPADO')
          ,('DOMICILIO PARTICULAR IMPROVISADO OCUPADO','DOMICILIO PARTICULAR IMPROVISADO OCUPADO'),
@@ -28,7 +25,6 @@ class Domicilio(models.Model):
         ('HOTEL OU PENSÃO','HOTEL OU PENSÃO'),
         ('ALOJAMENTO','ALOJAMENTO'),
         ('PENITENCIÁRIA, CENTRO DE DETENÇÃO E SIMILAR','PENITENCIÁRIA, CENTRO DE DETENÇÃO E SIMILAR'),
-        ('OUTRO','OUTRO'),
         ('ABRIGO','ABRIGO'), 
         ('ALBERGUE OU CASA DE PASSAGEM PARA POPULAÇÃO EM SITUAÇÃO DE RUA','ALBERGUE OU CASA DE PASSAGEM PARA POPULAÇÃO EM SITUAÇÃO DE RUA'),
         ('ABRIGO, CASAS DE PASSAGEM OU REPÚBLICA ASSISTENCIAL PARA OUTROS GRUPOS VULNERÁVEIS','ABRIGO, CASAS DE PASSAGEM OU REPÚBLICA ASSISTENCIAL PARA OUTROS GRUPOS VULNERÁVEIS'),
@@ -36,16 +32,47 @@ class Domicilio(models.Model):
         ('ORFANATO E SIMILAR','ORFANATO E SIMILAR'),
         ('UNIDADE DE INTERNAÇÃO DE MENORES','UNIDADE DE INTERNAÇÃO DE MENORES'),
         ('QUARTEL OU OUTRA ORGANIZAÇÃO MILITAR','QUARTEL OU OUTRA ORGANIZAÇÃO MILITAR'),
+        ('OUTRO','OUTRO'),
     ]
 
+    ESTADOS_BRASIL = [
+        ('AC', 'Acre'),
+        ('AL', 'Alagoas'),
+        ('AP', 'Amapá'),
+        ('AM', 'Amazonas'),
+        ('BA', 'Bahia'),
+        ('CE', 'Ceará'),
+        ('DF', 'Distrito Federal'),
+        ('ES', 'Espírito Santo'),
+        ('GO', 'Goiás'),
+        ('MA', 'Maranhão'),
+        ('MT', 'Mato Grosso'),
+        ('MS', 'Mato Grosso do Sul'),
+        ('MG', 'Minas Gerais'),
+        ('PA', 'Pará'),
+        ('PB', 'Paraíba'),
+        ('PR', 'Paraná'),
+        ('PE', 'Pernambuco'),
+        ('PI', 'Piauí'),
+        ('RJ', 'Rio de Janeiro'),
+        ('RN', 'Rio Grande do Norte'),
+        ('RS', 'Rio Grande do Sul'),
+        ('RO', 'Rondônia'),
+        ('RR', 'Roraima'),
+        ('SC', 'Santa Catarina'),
+        ('SP', 'São Paulo'),
+        ('SE', 'Sergipe'),
+        ('TO', 'Tocantins'),
+    ]
 
-    uf = models.CharField(max_length=2)
+    uf = models.CharField(choices=ESTADOS_BRASIL)
     municipio = models.CharField(max_length=50)
     distrito = models.CharField(max_length=50)
-    especieDomicilio = models.CharField(max_length=100,choices=ESPECIE_DOMICILIO)
+    cep = models.CharField(max_length=9)
+    especieDomicilio = models.CharField(max_length=100,choices=ESPECIE_DOMICILIO, default='OUTROS')
     tipoDomicilio = models.CharField(max_length=100,choices=TIPO_DOMICILIO)
-    qtdMoradores = models.CharField(max_length=2, null = True, blank= True)
-    qtdCriancas = models.CharField(max_length=2, null = True, blank= True)
+    qtdMoradores = models.PositiveSmallIntegerField()
+    qtdCriancas = models.PositiveSmallIntegerField()
     ABASTECIMENTO_AGUA = [
         ('REDE GERAL DE DISTRIBUIÇÃO', 'REDE GERAL DE DISTRIBUIÇÃO'),
         ('POÇO PROFUNDO OU ARTESIANO', 'POÇO PROFUNDO OU ARTESIANO'),
@@ -94,16 +121,15 @@ class Domicilio(models.Model):
     abastecimentoAgua = models.CharField(choices=ABASTECIMENTO_AGUA, null = True, blank= True)
     acessoRedeAgua = models.BooleanField(null = True, blank= True)
     aguaChega = models.CharField(choices=AGUA_UTILIZADA_CHEGA,  null = True, blank= True)
-    quantosbanheirosUsoExclusivo = models.CharField(max_length=2, null = True, blank= True)
+    quantosbanheirosUsoExclusivo = models.PositiveSmallIntegerField()
     utilizaBanheiroUsoComumMais = models.BooleanField(null = True, blank= True)
     utilizaSanitarioBuracoDejecoes = models.BooleanField(null = True, blank= True)
     esgotoFim = models.CharField(choices=ESGOTO_BANHEIRO_FIM, null = True, blank= True)
     esgotoSBFim = models.CharField(choices=ESGOTO_SANITARIO_BURACO_FIM, null = True, blank= True)
     lixoDomicilio = models.CharField(choices=LIXO_DOMICILIO, null = True, blank= True)
-    cep = models.CharField(max_length=9,null= True, blank = True)
 
     def __str__(self):
-        return self.uf
+        return str(self.id)
     
 
 
