@@ -66,13 +66,12 @@ class Domicilio(models.Model):
     ]
 
     uf = models.CharField(choices=ESTADOS_BRASIL)
-    municipio = models.CharField(max_length=50)
-    distrito = models.CharField(max_length=50)
+    cidade = models.CharField(max_length=50)
     cep = models.CharField(max_length=8, null=True, blank=True)
     especieDomicilio = models.CharField(max_length=100,choices=ESPECIE_DOMICILIO)
     tipoDomicilio = models.CharField(max_length=100,choices=TIPO_DOMICILIO)
-    qtdMoradores = models.PositiveSmallIntegerField(max_length=100, null=True, blank=True)
-    qtdCriancas = models.PositiveSmallIntegerField(max_length=100, null=True, blank=True)
+    qtdMoradores = models.PositiveSmallIntegerField()
+    qtdCriancas = models.PositiveSmallIntegerField(null=True, blank=True)
     ABASTECIMENTO_AGUA = [
         ('REDE GERAL DE DISTRIBUIÇÃO', 'REDE GERAL DE DISTRIBUIÇÃO'),
         ('POÇO PROFUNDO OU ARTESIANO', 'POÇO PROFUNDO OU ARTESIANO'),
@@ -121,12 +120,12 @@ class Domicilio(models.Model):
     abastecimentoAgua = models.CharField(choices=ABASTECIMENTO_AGUA, null = True, blank= True)
     acessoRedeAgua = models.BooleanField(null = True, blank= True)
     aguaChega = models.CharField(choices=AGUA_UTILIZADA_CHEGA,  null = True, blank= True)
-    quantosbanheirosUsoExclusivo = models.PositiveSmallIntegerField(null=True, blank=True)
-    utilizaBanheiroUsoComumMais = models.BooleanField(null = True, blank= True)
-    utilizaSanitarioBuracoDejecoes = models.BooleanField(null = True, blank= True)
-    esgotoFim = models.CharField(choices=ESGOTO_BANHEIRO_FIM, null = True, blank= True)
-    esgotoSBFim = models.CharField(choices=ESGOTO_SANITARIO_BURACO_FIM, null = True, blank= True)
-    lixoDomicilio = models.CharField(choices=LIXO_DOMICILIO, null = True, blank= True)
+    quantosbanheirosUsoExclusivo = models.PositiveSmallIntegerField()
+    utilizaBanheiroUsoComumMais = models.BooleanField(null=True, blank=True)
+    utilizaSanitarioBuracoDejecoes = models.BooleanField(null=True, blank=True)
+    esgotoFim = models.CharField(choices=ESGOTO_BANHEIRO_FIM)
+    esgotoSBFim = models.CharField(choices=ESGOTO_SANITARIO_BURACO_FIM)
+    lixoDomicilio = models.CharField(choices=LIXO_DOMICILIO)
 
     def __str__(self):
         return str(self.id)
