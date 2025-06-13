@@ -24,10 +24,18 @@ Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 Insira um manual ou um script para auxiliar ainda mais.
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Siga os passos abaixo para rodar o sistema localmente:
+
+---
+
+### Clonar o repositório
+
+```bash
+git clone https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA.git
+```
 
 ## Vídeo
-Adicione 1 ou mais vídeos com a execução do projeto final.
+[Vídeo de Funcionamento do Projeto](https://www.youtube.com/watch?v=nOv-7iZqYm8)
 
 ## Outros 
 [Pesquisa sobre o Censo Demográfico do IBGE 2022](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/pesquisa%20censo%20demografico.md)<br>
