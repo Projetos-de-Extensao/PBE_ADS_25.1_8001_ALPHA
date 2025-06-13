@@ -65,8 +65,3 @@ Acesse o [link](http://127.0.0.1:8000/admin/)
 
 ## Vídeo
 [Vídeo de Funcionamento do Projeto](https://www.youtube.com/watch?v=nOv-7iZqYm8)
-
-## Outros 
-[Pesquisa sobre o Censo Demográfico do IBGE 2022](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/pesquisa%20censo%20demografico.md)<br>
-[Brainstorm](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/Brainstorm.md)<br>
-[5W2H](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA/blob/main/docs/base/5w2h.md)
