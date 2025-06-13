@@ -67,6 +67,7 @@ class Domicilio(models.Model):
 
     uf = models.CharField(choices=ESTADOS_BRASIL)
     cidade = models.CharField(max_length=50)
+    municipio = models.CharField(max_length=100, null=True, blank=True)
     cep = models.CharField(max_length=8, null=True, blank=True)
     especieDomicilio = models.CharField(max_length=100,choices=ESPECIE_DOMICILIO)
     tipoDomicilio = models.CharField(max_length=100,choices=TIPO_DOMICILIO)
@@ -117,9 +118,9 @@ class Domicilio(models.Model):
         ('JOGADO EM TERRENO BALDIO, ENCOSTA OU ÁREA PÚBLICA', 'JOGADO EM TERRENO BALDIO, ENCOSTA OU ÁREA PÚBLICA'),
         ('OUTRO DESTINO', 'OUTRO DESTINO'),
     ]
-    abastecimentoAgua = models.CharField(choices=ABASTECIMENTO_AGUA, null = True, blank= True)
-    acessoRedeAgua = models.BooleanField(null = True, blank= True)
-    aguaChega = models.CharField(choices=AGUA_UTILIZADA_CHEGA,  null = True, blank= True)
+    abastecimentoAgua = models.CharField(choices=ABASTECIMENTO_AGUA)
+    acessoRedeAgua = models.BooleanField(null=True, blank=True)
+    aguaChega = models.CharField(choices=AGUA_UTILIZADA_CHEGA)
     quantosbanheirosUsoExclusivo = models.PositiveSmallIntegerField()
     utilizaBanheiroUsoComumMais = models.BooleanField(null=True, blank=True)
     utilizaSanitarioBuracoDejecoes = models.BooleanField(null=True, blank=True)
