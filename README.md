@@ -57,6 +57,8 @@ python manage.py runserver
 6- Acesse a aplicação
 Acesse o [link](http://127.0.0.1:8000/admin/)
 
+---
+
 ## Vídeo
 [Vídeo de Funcionamento do Projeto](https://www.youtube.com/watch?v=nOv-7iZqYm8)
 
