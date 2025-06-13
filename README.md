@@ -25,7 +25,7 @@ Plataforma para gerenciamento e armazenamento de dados sobre o questionário do 
 
 ## Instalação 
 **Linguagens**: Python<br>
-**Tecnologias**: DJango<br>
+**Tecnologias**: DJango, Visual Studio Code, GitHub<br>
 
 ## Uso 
 Siga os passos abaixo para rodar o sistema localmente:
@@ -37,28 +37,31 @@ Siga os passos abaixo para rodar o sistema localmente:
 git clone https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA.git
 ```
 
-2- Instalar as dependências do repositório
+2- Abrir a pasta com o Visual Studio Code
+
+3- Abrir o terminal no VSCode e instalar as dependências do repositório
 ```bash
 pip install -r requirements.txt
 ```
 
-3- Acessar as pastas para iniciar a aplicação
+4- Acessar as pastas para iniciar a aplicação
 ```bash
 cd src/alpha
 ```
 
-4- Criar super usuário para acessar painel de Administrativo do formulário
+5- Criar um super usuário para acessar o painel administrativo do formulário
 ```bash
 python manage.py createsuperuser
 ```
-Preencha as informações pessoais solicitadas corretamente
+Preencha as informações pessoais solicitadas corretamente e prossiga.
 
-5- Iniciar o servidor do Django
+6- Iniciar o servidor do Django
 ```bash
 python manage.py runserver
 ```
 
-6- Acesse a aplicação
+7- Acesse a aplicação
+
 Depois de iniciar a aplicação, digite este link [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
 ---
