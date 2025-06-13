@@ -59,7 +59,7 @@ python manage.py runserver
 ```
 
 6- Acesse a aplicação
-Acesse o [link](http://127.0.0.1:8000/admin/)
+Depois de iniciar a aplicação, digite este link [link](http://127.0.0.1:8000/admin/)
 
 ---
 
