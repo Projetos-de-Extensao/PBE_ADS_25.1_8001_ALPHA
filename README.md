@@ -61,7 +61,7 @@ python manage.py runserver
 ```
 
 7- Acesse a aplicação<br><br>
-Depois de iniciar a aplicação, digite o link fornecido no terminal abaixor: ![image](https://github.com/user-attachments/assets/b21b9f25-2099-4547-be74-7cdf66a68abc)<br><br>
+Depois de iniciar a aplicação, digite o link fornecido no terminal abaixo: ![image](https://github.com/user-attachments/assets/b21b9f25-2099-4547-be74-7cdf66a68abc)<br><br>
 Entre com seu usuário de admin criado, após isso, a aplicação já está funcionando localmente na sua máquina, caso tenha acontecido algum erro, revise os passos e tente novamente.<br><br>
 Segue abaixo um vídeo do funcionamento do projeto.
 
