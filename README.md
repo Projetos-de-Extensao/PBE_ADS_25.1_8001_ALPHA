@@ -32,7 +32,7 @@ Siga os passos abaixo para rodar o sistema localmente:
 
 ---
 
-1- Clonar o repositório
+1- Acesse o terminal do seu computador. Com o Git instalado, clone o repositório
 ```bash
 git clone https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA.git
 ```
