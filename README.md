@@ -26,8 +26,6 @@ Plataforma para gerenciamento e armazenamento de dados sobre o questionário do 
 ## Instalação 
 **Linguagens**: Python<br>
 **Tecnologias**: DJango<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
 
 ## Uso 
 Siga os passos abaixo para rodar o sistema localmente:
