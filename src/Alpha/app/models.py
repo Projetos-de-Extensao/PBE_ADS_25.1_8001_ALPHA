@@ -3,9 +3,10 @@ from django.db import models
 
 class Domicilio(models.Model):    
     ESPECIE_DOMICILIO = [
-        ('DOMICILIO PARTICULAR PERMANENTEMENTE OCUPADO','DOMICILIO PARTICULAR PERMANENTEMENTE OCUPADO')
-         ,('DOMICILIO PARTICULAR IMPROVISADO OCUPADO','DOMICILIO PARTICULAR IMPROVISADO OCUPADO'),
-         ('DOMICILIO COLETIVO COM MORADOR','DOMICILIO COLETIVO COM MORADOR')
+        ('DOMICILIO PARTICULAR PERMANENTEMENTE OCUPADO','DOMICILIO PARTICULAR PERMANENTEMENTE OCUPADO'),
+        ('DOMICILIO PARTICULAR IMPROVISADO OCUPADO','DOMICILIO PARTICULAR IMPROVISADO OCUPADO'),
+        ('DOMICILIO COLETIVO COM MORADOR','DOMICILIO COLETIVO COM MORADOR')
+
     ]
 
     TIPO_DOMICILIO = [
@@ -65,13 +66,13 @@ class Domicilio(models.Model):
         ('TO', 'Tocantins'),
     ]
 
-    uf = models.CharField(choices=ESTADOS_BRASIL)
-    cidade = models.CharField(max_length=50)
+    uf = models.CharField(choices=ESTADOS_BRASIL, null=True, blank=True)
+    cidade = models.CharField(max_length=50, null=True, blank=True)
     municipio = models.CharField(max_length=100, null=True, blank=True)
-    cep = models.CharField(max_length=8, null=True, blank=True)
-    especieDomicilio = models.CharField(max_length=100,choices=ESPECIE_DOMICILIO)
-    tipoDomicilio = models.CharField(max_length=100,choices=TIPO_DOMICILIO)
-    qtdMoradores = models.PositiveSmallIntegerField()
+    cep = models.CharField(max_length=10,default="00000-000")
+    especieDomicilio = models.CharField(max_length=100,choices=ESPECIE_DOMICILIO, null=True, blank=True)
+    tipoDomicilio = models.CharField(max_length=100,choices=TIPO_DOMICILIO, null=True, blank=True)
+    qtdMoradores = models.PositiveSmallIntegerField(null=True, blank=True)
     qtdCriancas = models.PositiveSmallIntegerField(null=True, blank=True)
     ABASTECIMENTO_AGUA = [
         ('REDE GERAL DE DISTRIBUIÇÃO', 'REDE GERAL DE DISTRIBUIÇÃO'),
@@ -118,15 +119,15 @@ class Domicilio(models.Model):
         ('JOGADO EM TERRENO BALDIO, ENCOSTA OU ÁREA PÚBLICA', 'JOGADO EM TERRENO BALDIO, ENCOSTA OU ÁREA PÚBLICA'),
         ('OUTRO DESTINO', 'OUTRO DESTINO'),
     ]
-    abastecimentoAgua = models.CharField(choices=ABASTECIMENTO_AGUA)
+    abastecimentoAgua = models.CharField(choices=ABASTECIMENTO_AGUA, null=True, blank=True)
     acessoRedeAgua = models.BooleanField(null=True, blank=True)
-    aguaChega = models.CharField(choices=AGUA_UTILIZADA_CHEGA)
-    quantosbanheirosUsoExclusivo = models.PositiveSmallIntegerField()
+    aguaChega = models.CharField(choices=AGUA_UTILIZADA_CHEGA, null=True, blank=True)
+    quantosbanheirosUsoExclusivo = models.PositiveSmallIntegerField(null=True, blank=True)
     utilizaBanheiroUsoComumMais = models.BooleanField(null=True, blank=True)
     utilizaSanitarioBuracoDejecoes = models.BooleanField(null=True, blank=True)
-    esgotoFim = models.CharField(choices=ESGOTO_BANHEIRO_FIM)
-    esgotoSBFim = models.CharField(choices=ESGOTO_SANITARIO_BURACO_FIM)
-    lixoDomicilio = models.CharField(choices=LIXO_DOMICILIO)
+    esgotoFim = models.CharField(choices=ESGOTO_BANHEIRO_FIM, null=True, blank=True)
+    esgotoSBFim = models.CharField(choices=ESGOTO_SANITARIO_BURACO_FIM, null=True, blank=True)
+    lixoDomicilio = models.CharField(choices=LIXO_DOMICILIO, null=True, blank=True)
 
     def __str__(self):
         return str(self.id)
@@ -134,14 +135,14 @@ class Domicilio(models.Model):
 
 
 class Morador(models.Model):
-    domicilio = models.ForeignKey(Domicilio, related_name= 'Morador', on_delete= models.CASCADE)
-    nome = models.CharField(max_length=100)
-    sobrenome = models.CharField(max_length=50)
+    domicilio = models.ForeignKey(Domicilio, related_name= 'Morador', on_delete= models.CASCADE, null=True, blank=True)
+    nome = models.CharField(max_length=100, null=True, blank=True)
+    sobrenome = models.CharField(max_length=50, null=True, blank=True)
     SEXO_MORADOR = [
         ("MASCULINO", "MASCULINO"),
         ("FEMININO", "FEMININO")
     ]
-    data_Nascimento = models.DateField()
+    data_Nascimento = models.DateField(null=True, blank=True)
     
     RELACAO_CONVIVENCIA = [
         ("PESSOA RESPONSAVEL PELO DOMICILIO", "PESSOA RESPONSAVEL PELO DOMICILIO"),
@@ -167,7 +168,113 @@ class Morador(models.Model):
         ("OUTRO", "OUTRA"),
         ("NO", "PREFIRO NÃO RESPONDER")
     ]
-    relacaoConvivencia = models.CharField(choices=RELACAO_CONVIVENCIA)
+    relacaoConvivencia = models.CharField(choices=RELACAO_CONVIVENCIA, null=True, blank=True)
+
+    COR_OU_RACA = [
+        ("BRANCA", "BRANCA"),
+        ("PRETA", "PRETA"),
+        ("AMARELA", "AMARELA"),
+        ("PARDA", "PARDA"),
+        ("INDÍGENA", "INDÍGENA")
+    ]
+
+    corOuRaca = models.CharField(choices=COR_OU_RACA, null=True, blank=True)
+    seConsideraIndigena = models.BooleanField(null=True, blank=True)
+    etnia1 = models.CharField(max_length=100, null=True, blank=True)
+    etnia2 = models.CharField(max_length=100, null=True, blank=True)
+    falaLinguaIndigenaDomicilio = models.BooleanField(null=True, blank=True)
+    linguaIndigena1 = models.CharField(max_length=100, null=True, blank=True)
+    linguaIndigena2 = models.CharField(max_length=100, null=True, blank=True)
+    linguaIndigena3 = models.CharField(max_length=100, null=True, blank=True)
+    falaPortuguesDomicilio = models.BooleanField(null=True, blank=True)
+    seConsideraQuilombola = models.BooleanField(null=True, blank=True)
+    nomeSuaComunidade = models.CharField(max_length=100, null=True, blank=True)
+
+    REGISTRO_CIVIL_CINCO_ANOS = [
+        ('DO CARTÓRIO', 'DO CARTÓRIO'),
+        ("REGISTRO ADMINISTRATIVO DE NASCIMENTO INDÍGENA (RANI)", "REGISTRO ADMINISTRATIVO DE NASCIMENTO INDÍGENA (RANI)"),
+        ("NÃO TEM", "NÃO TEM"),
+        ("NÃO SABE", "NÃO SABE")
+    ]
+
+    registroCivilAteCincoAnos = models.CharField(choices=REGISTRO_CIVIL_CINCO_ANOS, null=True, blank=True)
+    sabeLerEscrever = models.BooleanField(null=True, blank=True)
+
+    RENDIMENTO_BRUTO_MENSAL_RESPONSAVEL_DOMICILIO = [
+        ("VALOR EM DINHEIRO, PRODUTOS OU MERCADORIAS", " VALOR EM DINHEIRO, PRODUTOS OU MERCADORIAS"),
+        ("OUTRA FORMA (MORADIA, ALIMENTAÇÃO, TREINAMENTO ETC.)", "OUTRA FORMA (MORADIA, ALIMENTAÇÃO, TREINAMENTO ETC.)"),
+        ("NÃO TEM", "NÃO TEM")
+    ]
+
+    FAIXA_DE_RENDIMENTO = [
+        ("1,00 A 500,00", "1,00 A 500,00"),
+        ("501,00 A 1.000,00", "501,00 A 1.000,00"),
+        ("1.001,00 A 2.000,00", "1.001,00 A 2.000,00"),
+        ("2.001,00 A 3.000,00", "2.001,00 A 3.000,00"),
+        ("3.001,00 A 5.000,00", "3.001,00 A 5.000,00"),
+        ("5.001,00 A 10.000,00", "5.001,00 A 10.000,00"),
+        ("10.001,00 A 20.000,00", "10.001,00 A 20.000,00"),
+        ("20.001,00 A 100.000", "20.001,00 A 100.000"),
+        ("100.001 OU MAIS", "100.001 OU MAIS")
+    ]
+
+
+    valorRendimentoBrutoMensal = models.CharField(max_length=6, null=True, blank=True)
+    faixaRendimento = models.CharField(choices=FAIXA_DE_RENDIMENTO, null=True, blank=True)
+    rendimentoBrutoMensalResponsavelDom = models.CharField(choices= RENDIMENTO_BRUTO_MENSAL_RESPONSAVEL_DOMICILIO, null=True, blank=True)
+    janeiro2019AJulho2025FaleceuPessoa = models.BooleanField(null=True, blank=True)
+    nomeFalecido = models.CharField(max_length= 20, null=True, blank=True)
+    SobrenomeFalecido = models.CharField(max_length=50, null=True, blank=True)
+
+    MES_ANO_FALECIMENTO = [
+        ("JULHO 2022", "JULHO 2022"),
+        ("JUNHO 2022", "JUNHO 2022"),
+        ("MAIO 2022", "MAIO 2022"),
+        ("MARÇO 2019", "MARÇO 2019"),
+        ("FEVEREIRO 2019", "FEVEREIRO 2019"),
+        ("JANEIRO 2019", "JANEIRO 2019")
+    ]
+
+    mesAnoFalecimento = models.CharField(choices=MES_ANO_FALECIMENTO, null=True, blank=True)
+
+    SEXO_PESSOA_FALECIDA = [
+        ("MASCULINO", "MASCULINO"),
+        ("FEMININO", "FEMININO")
+    ]
+
+    sexoPessoaFalecida = models.CharField(choices=SEXO_PESSOA_FALECIDA, null=True, blank=True)
+
+    IDADE_PESSOA_FALECIDA = [
+        ("FALECEU COM UM ANO OU MAIS DE IDADE", "FALECEU COM UM ANO OU MAIS DE IDADE"),
+        ("FALECEU COM MENOS DE UM ANO DE IDADE", "FALECEU COM MENOS DE UM ANO DE IDADE")
+    ]
+
+    idadePessoaFalecida = models.CharField(choices=IDADE_PESSOA_FALECIDA, null=True, blank=True)
+    quantosAnosAoFalecer = models.CharField(max_length=3, null=True, blank=True)
+    quantosMesesAoFalecer = models.CharField(max_length=2, null=True, blank=True)
+
+    QUEM_PRESTOU_INFORMACOES_PESSOA = [
+        ("A PRÓPRIA PESSOA", "A PRÓPRIA PESSOA"),
+        ("OUTRO MORADOR", "OUTRO MORADOR"),
+        ("NÃO MORADOR", "NÃO MORADOR")
+    ]
+
+    quemPrestouInformacoesPessoa = models.CharField(choices=QUEM_PRESTOU_INFORMACOES_PESSOA, null=True, blank=True)
+    nomeOutroMorador = models.CharField(max_length= 100, null=True, blank=True)
+
+    contatoNome = models.CharField(max_length= 100, null=True, blank=True)
+    contatoEmail = models.CharField(max_length=320, null=True, blank=True)
+
+    TELEFONE = [
+        ("FIXO", "FIXO"),
+        ("MÓVEL", "MÓVEL")
+    ]
+
+    contatoTelefone = models.CharField(choices=TELEFONE, null=True, blank=True)
+    contatoNumero = models.CharField(max_length=10, null=True, blank=True)
+    contatoCpf = models.CharField(max_length=11, null=True, blank=True)
+
+
 
     def __str__(self):
         return self.nome
