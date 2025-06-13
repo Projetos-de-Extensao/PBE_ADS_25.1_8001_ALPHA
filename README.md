@@ -28,11 +28,34 @@ Siga os passos abaixo para rodar o sistema localmente:
 
 ---
 
-### Clonar o repositório
-
+1- Clonar o repositório
 ```bash
 git clone https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA.git
 ```
+
+2- Instalar as dependências do repositório
+```bash
+pip install -r requirements.txt
+```
+
+3- Acessar as pastas para iniciar a aplicação
+```bash
+cd src/alpha
+```
+
+4- Criar super usuário para acessar painel de Administrativo do formulário
+```bash
+python manage.py createsuperuser
+```
+Preencha as informações pessoais solicitadas corretamente
+
+5- Iniciar o servidor do Django
+```bash
+python manage.py runserver
+```
+
+6- Acesse a aplicação
+Acesse o [link](http://127.0.0.1:8000/admin/)
 
 ## Vídeo
 [Vídeo de Funcionamento do Projeto](https://www.youtube.com/watch?v=nOv-7iZqYm8)
