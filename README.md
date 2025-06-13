@@ -16,9 +16,12 @@ Plataforma para gerenciamento e armazenamento de dados sobre o questionário do 
 
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/8ed5035f-bf0d-4510-a4ad-f903b769e719)
+-
 ![image](https://github.com/user-attachments/assets/207317d1-d60e-444e-9ba7-aca6c89972ae)
+-
 ![image](https://github.com/user-attachments/assets/c6b5d510-eaa6-4ceb-b036-ed4dd4cc9e99)
 
+---
 
 ## Instalação 
 **Linguagens**: Python<br>
