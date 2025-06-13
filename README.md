@@ -25,7 +25,7 @@ Plataforma para gerenciamento e armazenamento de dados sobre o questionário do 
 
 ## Instalação 
 **Linguagens**: Python<br>
-**Tecnologias**: DJango, Visual Studio Code, GitHub<br>
+**Tecnologias**: DJango, Visual Studio Code, GitHub, SQLite3<br>
 
 ## Uso 
 Siga os passos abaixo para rodar o sistema localmente:
@@ -37,7 +37,7 @@ Siga os passos abaixo para rodar o sistema localmente:
 git clone https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_ALPHA.git
 ```
 
-2- Abrir a pasta com o Visual Studio Code
+2- Abrir a pasta com o Visual Studio Code<br>
 
 3- Abrir o terminal no VSCode e instalar as dependências do repositório
 ```bash
@@ -60,9 +60,10 @@ Preencha as informações pessoais solicitadas corretamente e prossiga.
 python manage.py runserver
 ```
 
-7- Acesse a aplicação
-
-Depois de iniciar a aplicação, digite este link [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+7- Acesse a aplicação<br><br>
+Depois de iniciar a aplicação, digite o link fornecido no terminal abaixor: ![image](https://github.com/user-attachments/assets/b21b9f25-2099-4547-be74-7cdf66a68abc)<br><br>
+Entre com seu usuário de admin criado, após isso, a aplicação já está funcionando localmente na sua máquina, caso tenha acontecido algum erro, revise os passos e tente novamente.<br><br>
+Segue abaixo um vídeo do funcionamento do projeto.
 
 ---
 
